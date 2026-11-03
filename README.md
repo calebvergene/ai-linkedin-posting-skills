@@ -2,37 +2,6 @@
 
 Claude skills for writing LinkedIn posts, one per post format. Each skill outputs plain text ready to paste into LinkedIn. Two image skills turn your numbers into a PNG for the post.
 
-## Install
-
-Copy the skill folders into `~/.claude/skills`:
-
-```bash
-mkdir -p ~/.claude/skills
-cp -R linkedin-* image-* ~/.claude/skills/
-```
-
-For claude.ai, zip each `linkedin-*` skill folder and upload it under Settings → Capabilities → Skills. The `image-*` skills run scripts, so they work in Claude Code only.
-
-## Usage
-
-```
-/linkedin-case-study how we grew a dev-tools founder from 0 to 18 inbound demos/month in 90 days
-```
-
-```
-/linkedin-lead-magnet my cold email swipe file, audience: agency owners
-```
-
-```
-/image-sankey applied 1040, 640 ghosted, 378 rejected, 22 OAs, 14 first round, 8 second round (4 offers), 3 third round (1 offer)
-```
-
-```
-/image-growth-chart website visitors: 10 per day two weeks ago, 400 per day today
-```
-
-Or describe the post you want and the matching skill triggers.
-
 ## Post skills
 
 🔥 marks the formats that performed best.
@@ -94,8 +63,6 @@ visitors on my website:
 ```
 
 Inputs: the numbers, in any format. For `image-sankey`, say which outcomes came out of which stage, for example "8 second round (4 of these offers)". For `image-growth-chart`, give the metric, the start and end values, and the time range.
-
-Setup: needs Node and Google Chrome. Run `npm install` once in each skill folder, for example `~/.claude/skills/image-sankey`.
 
 ## Post format tips
 
