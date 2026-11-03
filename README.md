@@ -1,6 +1,6 @@
 # ai-linkedin-posting-skills
 
-Claude skills for writing LinkedIn posts, one per post format. Each skill outputs plain text ready to paste into LinkedIn. Two image skills turn your numbers into a PNG for the post.
+Generate posts here: https://claude.ai/artifact/6TPDtgNyUYFCLfdQYyAfSp#generate
 
 ## Post skills
 
@@ -33,36 +33,6 @@ Claude skills for writing LinkedIn posts, one per post format. Each skill output
 | Tone | Optional. How you sound: a short description, a sample post, or a list of writing rules. The skill keeps the layout and adjusts the wording of each sentence to match. |
 | All lowercase / relaxed tone | Optional. Ask for an all-lowercase, relaxed version of the post. |
 
-## Image skills
-
-| Skill | What it makes |
-|---|---|
-| `image-sankey` | Sankey diagram PNG from stage counts (applied, rejected, interviews, offers). Claude writes the [SankeyMATIC](https://github.com/nowthis/sankeymatic) input, adds fixed settings, and renders it with the real SankeyMATIC code in headless Chrome. The watermark is hidden. |
-| `image-growth-chart` | Chart PNG for a metric that grew, drawn like LinkedIn's creator analytics card: the daily line, the total on top, dates ending today. Only your numbers are real; the days between them are generated. |
-
-Output: a PNG, 2400×2000.
-
-Example input for `image-sankey` ([the post that used this image](https://lnkd.in/p/gsrzkUPS)):
-
-```
-applied 1040
-640 ghosted
-378 rejected
-22 OAs
-14 first round
-8 second round (4 of these offers)
-3 third round (1 of these offers)
-```
-
-Example input for `image-growth-chart`:
-
-```
-visitors on my website:
-10 per day two weeks ago,
-400 per day today
-```
-
-Inputs: the numbers, in any format. For `image-sankey`, say which outcomes came out of which stage, for example "8 second round (4 of these offers)". For `image-growth-chart`, give the metric, the start and end values, and the time range.
 
 ## Post format tips
 
